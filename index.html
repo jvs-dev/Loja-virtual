@@ -35,12 +35,14 @@
         <ion-icon name="settings-sharp" class="icon config"></ion-icon>
         </div>
     </header>
-        <div class="imgs">
-            <ion-icon name="caret-back-outline" class="icon setleft"></ion-icon>
-            <div class="propaganda">
-                Produtos em Destaque!
-            </div>
-            <ion-icon name="caret-forward-outline" class="icon setright"></ion-icon>
+    <p class="pprop">Produtos em Destaque!</p>
+        <div class="slider">
+            <img src="suporte de plantas 8.jpg" alt="" class="selected">
+            <img src="suporte de plantas 0.jpg" alt="">
+            <img src="suporte de plantas 7.jpg" alt="">
+        </div>
+        <div>
+            
         </div>
     </section>
 
@@ -53,7 +55,28 @@
         let sun = document.querySelector('.sun')
         let copyrightText = document.querySelector('.copyrightText')
         let config = document.querySelector('.config')
-        
+        let time = 4000, currentimageindex = 0, images = document.querySelectorAll('.slider img')
+        max = images.length
+
+        function nextimage() {
+
+            images[currentimageindex].classList.remove("selected")
+
+            currentimageindex++
+
+            if(currentimageindex >= max)
+            currentimageindex = 0
+
+            images[currentimageindex].classList.add("selected")
+        }
+
+        function start() {
+            setInterval(() => {
+                nextimage()
+            }, time)
+            
+        }
+
         menutoggle.onclick = function(){
             menutoggle.classList.toggle('active')
             menuset.classList.toggle('active')
@@ -67,6 +90,8 @@
             moon.classList.toggle('no')
             sun.classList.toggle('no')
         }
+
+        window.addEventListener("load",start)
 
     </script>
 </body>
