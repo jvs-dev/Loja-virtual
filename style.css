@@ -292,27 +292,21 @@ body
 }
 .produtos
 {
-    margin-top: 400px;
-    height: 1000px;
-    width: auto;
-    display: inline-block;
+    margin: 0px;
+    display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-content: center;
-    padding-left: 40px;
-    padding-right: 40px;
-   
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .produto
 {   
-    display: inline-block;
     width: 200px;
     height: 350px;
     box-shadow: var(--black) 0px 0px 8px;
     border-radius: 25px;
     padding: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 80px;
+    margin: 50px;
     background: linear-gradient(-45deg, cyan, blue) no-repeat;;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -356,4 +350,13 @@ body
 {
     color: black;
     margin-top: 0px;
+}
+.loja
+{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 400px;
 }
