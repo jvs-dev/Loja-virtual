@@ -295,9 +295,11 @@ body
     margin-top: 400px;
     height: 1000px;
     width: auto;
+    display: inline-block;
     justify-content: space-between;
-    padding-left: 80px;
-    padding-right: 80px;
+    align-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
    
 }
 .produto
@@ -310,6 +312,7 @@ body
     padding: 10px;
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom: 80px;
     background: linear-gradient(-45deg, cyan, blue) no-repeat;;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -353,8 +356,4 @@ body
 {
     color: black;
     margin-top: 0px;
-}
-.prdt1
-{
-
 }

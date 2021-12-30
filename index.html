@@ -44,19 +44,40 @@
         </div>
     </section>
     <div class="produtos">
-        <div class="produto" id="prdt1">
-            <ion-icon name="heart" class="cora"></ion-icon>
+        <div class="produto">
+            <ion-icon name="heart" class="cora prod1"></ion-icon>
             <img class="imgproduto" src="suporte de plantas 3.jpg" alt="suporte de plantas">
             <p class="nome">Suporte para plantas</p>
-            <p class="valor"><sub class="moeda">R$</sub>49,99</p>
+            <p class="valor"><sub class="moeda">R$</sub>39,99</p>
             <p class="descrição">Suporte para plantas de madeira para enfeitar...</p>
         </div>
-        <div class="produto" id="prdt2">
-            <ion-icon name="heart" class="cora"></ion-icon>
+        <div class="produto">
+            <ion-icon name="heart" class="cora prod2"></ion-icon>
             <img class="imgproduto" src="suporte de plantas 10.jpg" alt="suporte de plantas">
+            <p class="nome">Jarro para plantas</p>
+            <p class="valor"><sub class="moeda">R$</sub>19,99</p>
+            <p class="descrição">Jarro para plantas de madeira para enfeitar...</p>
+        </div>
+        <div class="produto">
+            <ion-icon name="heart" class="cora prod3"></ion-icon>
+            <img class="imgproduto" src="bancos de madeira.jpg" alt="suporte de plantas">
             <p class="nome">Jarro para plantas</p>
             <p class="valor"><sub class="moeda">R$</sub>29,99</p>
             <p class="descrição">Jarro para plantas de madeira para enfeitar...</p>
+        </div>
+        <div class="produto">
+            <ion-icon name="heart" class="cora prod4"></ion-icon>
+            <img class="imgproduto" src="mesa de centro jardim.jpg" alt="suporte de plantas">
+            <p class="nome">Mesa de centro/jardim</p>
+            <p class="valor"><sub class="moeda">R$</sub>49,99</p>
+            <p class="descrição">Mesa de centro de madeira para décorar...</p>
+        </div>
+        <div class="produto">
+            <ion-icon name="heart" class="cora prod5"></ion-icon>
+            <img class="imgproduto" src="porta livros de madeira (2).jpg" alt="suporte de plantas">
+            <p class="nome">Porta livros de madeira</p>
+            <p class="valor"><sub class="moeda">R$</sub>14,99</p>
+            <p class="descrição">Porta livros de madeira para décorar...</p>
         </div>
     </div>
 
@@ -65,12 +86,12 @@
         let menuset = document.querySelector('.menuset');
         let daynight = document.querySelector('.daynight');
         let body = document.querySelector('body');
-        let moon = document.querySelector('.moon')
-        let sun = document.querySelector('.sun')
-        let copyrightText = document.querySelector('.copyrightText')
-        let config = document.querySelector('.config')
-        let Local = document.querySelector('.Local')
-        let cora = document.querySelector('.cora')
+        let moon = document.querySelector('.moon');
+        let sun = document.querySelector('.sun');
+        let copyrightText = document.querySelector('.copyrightText');
+        let config = document.querySelector('.config');
+        let Local = document.querySelector('.Local');
+        let prod5 = document.querySelector('.prod5');
         let time = 4000, currentimageindex = 0, images = document.querySelectorAll('.slider img')
         max = images.length
 
@@ -108,8 +129,8 @@
             sun.classList.toggle('no')
         }
 
-        cora.onclick = function(){
-            cora.classList.toggle('favorite')
+        prod5.onclick = function(){
+            prod5.classList.toggle('favorite')
         }
 
         window.addEventListener("load",start)
