@@ -24,13 +24,18 @@ body
 }
 .Logo
 {
-    height: 50px;
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 150px;
+    min-height: 75%;
 }
 .src
 {
     display: inline;
     height: 35px;
     width: 550px;
+    min-width: 120px;
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 40px;
@@ -247,10 +252,10 @@ body
 }
 .slider
 {
-    margin-top: 130px;
+    margin-top: 150px;
     width: 90%;
-    max-width: 1000px;
-    height: 280px;
+    max-width: 1150px;
+    height: 300px;
     max-height: 300px;
     position: absolute;
     cursor: pointer;
@@ -274,7 +279,7 @@ body
 }
 .pprop
 {
-    margin-top: 60px;
+    margin-top: 75px;
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
     color: var(--black);
@@ -295,6 +300,8 @@ body
     margin: 0px;
     display: flex;
     width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
     justify-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
@@ -302,11 +309,11 @@ body
 .produto
 {   
     width: 200px;
-    height: 350px;
+    height: 370px;
     box-shadow: var(--black) 0px 0px 8px;
     border-radius: 25px;
-    padding: 10px;
-    margin: 50px;
+    padding: 15px;
+    margin: 40px;
     background: linear-gradient(-45deg, cyan, blue) no-repeat;;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -350,6 +357,7 @@ body
 {
     color: black;
     margin-top: 0px;
+    margin-bottom: 5px;
 }
 .loja
 {
@@ -359,4 +367,12 @@ body
     align-content: center;
     width: 100%;
     margin-top: 400px;
+}
+.elips
+{
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 0px;
 }

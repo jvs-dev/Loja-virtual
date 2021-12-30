@@ -45,40 +45,68 @@
     </section>
     <section class="loja">
     <div class="produtos">
-        <div class="produto">
-            <ion-icon name="heart" class="cora prod1"></ion-icon>
-            <img class="imgproduto" src="suporte de plantas 3.jpg" alt="suporte de plantas">
+        <div class="produto prod1">
+            <ion-icon name="heart" class="cora c1"></ion-icon>
+            <img class="imgproduto" src="suporte de plantas 3.jpg" alt="produto">
             <p class="nome">Suporte para plantas</p>
             <p class="valor"><sub class="moeda">R$</sub>39,99</p>
             <p class="descrição">Suporte para plantas de madeira para enfeitar...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
         </div>
-        <div class="produto">
-            <ion-icon name="heart" class="cora prod2"></ion-icon>
-            <img class="imgproduto" src="suporte de plantas 10.jpg" alt="suporte de plantas">
+        <div class="produto prod2">
+            <ion-icon name="heart" class="cora c2"></ion-icon>
+            <img class="imgproduto" src="suporte de plantas 10.jpg" alt="produto">
             <p class="nome">Jarro para plantas</p>
             <p class="valor"><sub class="moeda">R$</sub>19,99</p>
             <p class="descrição">Jarro para plantas de madeira para enfeitar...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
         </div>
-        <div class="produto">
-            <ion-icon name="heart" class="cora prod3"></ion-icon>
-            <img class="imgproduto" src="bancos de madeira.jpg" alt="suporte de plantas">
+        <div class="produto prod3">
+            <ion-icon name="heart" class="cora c3"></ion-icon>
+            <img class="imgproduto" src="bancos de madeira.jpg" alt="produto">
             <p class="nome">Jarro para plantas</p>
             <p class="valor"><sub class="moeda">R$</sub>29,99</p>
             <p class="descrição">Jarro para plantas de madeira para enfeitar...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
         </div>
-        <div class="produto">
-            <ion-icon name="heart" class="cora prod4"></ion-icon>
-            <img class="imgproduto" src="mesa de centro jardim.jpg" alt="suporte de plantas">
+        <div class="produto prod4">
+            <ion-icon name="heart" class="cora c4"></ion-icon>
+            <img class="imgproduto" src="mesa de centro jardim.jpg" alt="produto">
             <p class="nome">Mesa de centro/jardim</p>
             <p class="valor"><sub class="moeda">R$</sub>49,99</p>
             <p class="descrição">Mesa de centro de madeira para décorar...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
         </div>
-        <div class="produto">
-            <ion-icon name="heart" class="cora prod5"></ion-icon>
-            <img class="imgproduto" src="porta livros de madeira (2).jpg" alt="suporte de plantas">
-            <p class="nome">Porta livros de madeira</p>
+        <div class="produto prod5">
+            <ion-icon name="heart" class="cora c5"></ion-icon>
+            <img class="imgproduto" src="porta livros de madeira (2).jpg" alt="produto">
+            <p class="nome">Cesta pequena</p>
             <p class="valor"><sub class="moeda">R$</sub>14,99</p>
             <p class="descrição">Porta livros de madeira para décorar...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
+        </div>
+        <div class="produto prod6">
+            <ion-icon name="heart" class="cora c6"></ion-icon>
+            <img class="imgproduto" src="cesta de carne de madeira.jpg" alt="produto">
+            <p class="nome">Cesta de carne</p>
+            <p class="valor"><sub class="moeda">R$</sub>12,99</p>
+            <p class="descrição">Cesta de carne feita de madeira...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
+        </div>
+        <div class="produto prod7">
+            <ion-icon name="heart" class="cora c7"></ion-icon>
+            <img class="imgproduto" src="porta livros de madeira.jpg" alt="produto">
+            <p class="nome">Porta livros de madeira</p>
+            <p class="valor"><sub class="moeda">R$</sub>29,99</p>
+            <p class="descrição">Cabine de madeira portatil para...</p>
+            <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
+
         </div>
     </div>
     </section>
@@ -93,6 +121,12 @@
         let config = document.querySelector('.config');
         let Local = document.querySelector('.Local');
         let prod5 = document.querySelector('.prod5');
+        let c1 = document.querySelector('.c1')
+        let c2 = document.querySelector('.c2')
+        let c3 = document.querySelector('.c3')
+        let c4 = document.querySelector('.c4')
+        let c5 = document.querySelector('.c5')
+        let c6 = document.querySelector('.c6')
         let time = 4000, currentimageindex = 0, images = document.querySelectorAll('.slider img')
         max = images.length
 
@@ -131,8 +165,33 @@
         }
 
         prod5.onclick = function(){
-            prod5.classList.toggle('favorite')
+            prod5.classList.toggle('active')
         }
+
+        c1.onclick = function(){
+            c1.classList.toggle('favorite')
+        }
+
+        c2.onclick = function(){
+            c2.classList.toggle('favorite')
+        }
+
+        c3.onclick = function(){
+            c3.classList.toggle('favorite')
+        }
+
+        c4.onclick = function(){
+            c4.classList.toggle('favorite')
+        }
+
+        c5.onclick = function(){
+            c5.classList.toggle('favorite')
+        }
+
+        c6.onclick = function(){
+            c6.classList.toggle('favorite')
+        }
+
 
         window.addEventListener("load",start)
 
