@@ -8,14 +8,19 @@ body
     --black: #0e1112;
     --white: #fff;
     --royalblue: royalblue;
-    --turquoise: deepskyblue;
+    --turquoise: royalblue;
+    --red: white;
 }
 .dark
 {
     --white: #0e1112;
     --black: #fff;
     --royalblue: darkturquoise;
-    --turquoise: royalblue;
+    --turquoise: deepskyblue;
+}
+.favorite
+{
+    --red: red;
 }
 .Logo
 {
@@ -85,8 +90,6 @@ body
     border: solid 1px;
     border-color: var(--black);
     border-radius: 4px;
-    transition-delay: 0s;
-    transition-duration: 0.3s;
 }
 .toggle:hover
 {   transition-delay: 0.1s;
@@ -195,6 +198,27 @@ body
 .copyrightText.active
 {
     opacity: 0;
+    z-index: -2;
+    transition-delay: 0.1s;
+    transition: 0.1s;
+}
+.Local
+{
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: var(--black);
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+.Local.active
+{
+    opacity: 0;
+    z-index: -2;
     transition-delay: 0.1s;
     transition: 0.1s;
 }
@@ -215,12 +239,11 @@ body
     transition: 0.2s; 
 }
 
-section
+.section1
 {
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 10000px;
 }
 .slider
 {
@@ -242,7 +265,7 @@ section
     border-radius: 20px;
     width: 100%;
     height: 100%;
-    transition: 0.5s;
+    transition: opacity 0.5s;
     object-fit: cover;
 }
 .slider img.selected
@@ -255,4 +278,83 @@ section
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
     color: var(--black);
+}
+.imgproduto
+{
+    display: flex;
+    height: 130px;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 20px;
+}
+.produtos
+{
+    margin-top: 400px;
+    height: 1000px;
+    width: auto;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+   
+}
+.produto
+{   
+    display: inline-block;
+    width: 200px;
+    height: 350px;
+    box-shadow: var(--black) 0px 0px 8px;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background: linear-gradient(-45deg, cyan, blue) no-repeat;;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.produto:hover
+{
+    transform: scale(1.05);
+}
+.cora
+{
+    color: var(--red);
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 55px;
+    cursor: pointer;
+    font-size: 30px;
+    text-shadow: black 0px 0px 2px;
+}
+.nome
+{
+    font-size: 30px;
+    font-weight: 5000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+}
+.valor
+{
+    margin-top: 0px;
+    font-size: 40px;
+    color: forestgreen;
+    margin-bottom: 0px;
+}
+.moeda
+{
+    font-size: 30px;
+}
+.descrição
+{
+    color: black;
+    margin-top: 0px;
+}
+.prdt1
+{
+
 }
