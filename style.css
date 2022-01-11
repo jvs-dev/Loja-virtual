@@ -341,7 +341,7 @@ body
 #anun1
 {
     font-size: 60px;
-    color: #00f700;
+    color: red;
     position: absolute;
     margin-top: 200px;
     margin-left: 3%;
@@ -349,7 +349,7 @@ body
 #anun2
 {
     font-size: 60px;
-    color: turquoise;
+    color: white;
     position: absolute;
     margin-left: 3%;
     margin-top: 1%;
