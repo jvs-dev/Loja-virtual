@@ -321,8 +321,8 @@ body
 
     position: absolute;
     border: solid 5px;
-    border-color: var(--black);
-    border-radius: 20px;
+    border-color: darkslategray;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     transition: opacity 0.5s;
@@ -334,10 +334,25 @@ body
 }
 .pprop
 {
-    margin-top: 75px;
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    color: var(--black);
+    z-index: 5;
+    text-shadow: black 2px 2px 1px
+}
+#anun1
+{
+    font-size: 60px;
+    color: #00f700;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 3%;
+}
+#anun2
+{
+    font-size: 60px;
+    color: turquoise;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 1%;
 }
 .imgproduto
 {
@@ -366,11 +381,11 @@ body
 {   
     width: 200px;
     height: 370px;
-    box-shadow: var(--black) 0px 0px 8px;
-    border-radius: 25px;
+    box-shadow: silver 0px 0px 8px;
+    border-radius: 20px;
     padding: 15px;
     margin: 40px;
-    background: linear-gradient(-45deg, cyan, blue) no-repeat;;
+    background: linear-gradient(dodgerblue, lightblue) no-repeat;;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     cursor: pointer;
@@ -402,7 +417,7 @@ body
 {
     margin-top: 0px;
     font-size: 40px;
-    color: forestgreen;
+    color: #009c00;
     margin-bottom: 0px;
 }
 .moeda
@@ -415,6 +430,57 @@ body
     margin-top: 0px;
     margin-bottom: 5px;
 }
+.bestvl
+{
+    position: relative;
+}
+.bestvl span
+{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+}
+.bestvl span::before
+{
+    content: 'Best value';
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background-color: turquoise;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    box-shadow: 0px 5px 10px #3a3a3a4f;
+    z-index: 2;
+    cursor: default;
+}
+.bestvl span::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: turquoise;
+    z-index: 1;
+    box-shadow: 140px -140px turquoise;
+    cursor: default;
+}
 .loja
 {
     display: flex;
@@ -422,14 +488,23 @@ body
     justify-content: center;
     align-content: center;
     width: 100%;
-    margin-top: 400px;
+    margin-top: 600px;
 }
 .elips
 {
     position: absolute;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     margin-left: 90px;
+    margin-top: 0px;
+}
+.cartcrd
+{
+    position: absolute;
+    display: flex;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 0px;
     margin-top: 0px;
 }
 
