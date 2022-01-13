@@ -25,9 +25,9 @@
                     <p class="folow">Follow-me!</p>
                 </div>
                 <div class="menuset">
-                    <a href="index.html"><ion-icon name="storefront" class="icon"></ion-icon></a>
+                    <a href="index.html"><ion-icon name="storefront" class="icon you"></ion-icon></a>
                     <a href="cart.html"><ion-icon name="cart-outline" class="icon"></ion-icon></a>
-                    <a href="favorits.html"><ion-icon name="heart" class="icon you"></ion-icon></a>
+                    <a href="favorits.html"><ion-icon name="heart" class="icon"></ion-icon></a>
                     <ion-icon name="person-circle-outline" class="icon"></ion-icon>
                 </div>
                 <div class="toggle"></div>
@@ -40,8 +40,30 @@
             </div>
         </header>
     </section>
-    <section class="loja fav">
-        <p class="aviso2">Você ainda não adicionou nenhum produto aos favoritos!</p>
+    <section class="pgprdt">
+            <div class="imgprodpg"><ion-icon name="heart" class="cora2"></ion-icon></div>
+            <p class="pprodpg"></p>
+            <p class="nomeprodpg"></p>
+            <p class="descriçãoprodpg"></p>
+            <p class="valorprodpg"><sub class="moedaprodpg"></sub></p>
+            <div class="leftsidepg">
+                <p class="variação">Variação:</p>
+                <div class="variacoes">
+                    <div class="variaçãoimg prodselect" id="vrcimg1"></div>
+                    <div class="variaçãoimg" id="vrcimg2"></div>
+                    <div class="variaçãoimg" id="vrcimg3"></div>
+                </div>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5571988869309&text=ola" class="comprar"><ion-icon class="zap" name="logo-whatsapp"></ion-icon><p class="pcompr">Comprar agora</p></a>
+            <div class="rightsidepg">
+                <ion-icon cartprodpg name="cart-outline"></ion-icon>
+                <div class="addremovecart">
+                    <ion-icon class="removecart" name="remove-outline"></ion-icon>
+                    <input class="quantidade" type="number" max="10" min="0" name="quantidade" id="quantidadecart">
+                    <ion-icon class="addcart" name="add-outline"></ion-icon>
+
+                </div>
+            </div>
     </section>
     <script>
         let menutoggle = document.querySelector('.toggle');
@@ -53,7 +75,7 @@
         let copyrightText = document.querySelector('.copyrightText');
         let config = document.querySelector('.config');
         let Local = document.querySelector('.Local');
-        let prod1 = document.querySelector('.prod1')
+        var prod1 = document.querySelector('.prod1')
         let prod5 = document.querySelector('.prod5');
         let c1 = document.querySelector('.c1')
         let c2 = document.querySelector('.c2')
@@ -62,7 +84,49 @@
         let c5 = document.querySelector('.c5')
         let c6 = document.querySelector('.c6')
         let c7 = document.querySelector('.c7')
+        let c8 = document.querySelector('.c8')
+        let c9 = document.querySelector('.c9')
+        let c10 = document.querySelector('.c10')
+        let c11 = document.querySelector('.c11')
+        let c12 = document.querySelector('.c12')
+        let vrcimg1 = document.getElementById("vrcimg1");
+        let vrcimg2 = document.getElementById("vrcimg2");
+        let vrcimg3 = document.getElementById("vrcimg3")
 
+        vrcimg1.addEventListener('click',function(){
+                if (vrcimg2.classList.contains('prodselect')) {
+                    vrcimg1.classList.add('prodselect')
+                    vrcimg2.classList.remove('prodselect')
+                }
+                if (vrcimg3.classList.contains('prodselect')) {
+                    vrcimg1.classList.add('prodselect')
+                    vrcimg3.classList.remove('prodselect')
+                }
+            
+        })
+
+        vrcimg2.addEventListener('click',function(){
+            if (vrcimg1.classList.contains('prodselect')) {
+                vrcimg2.classList.add('prodselect')
+                vrcimg1.classList.remove('prodselect')
+            }
+            if (vrcimg3.classList.contains('prodselect')) {
+                vrcimg2.classList.add('prodselect')
+                vrcimg3.classList.remove('prodselect')
+            }
+        
+        })
+        vrcimg3.addEventListener('click',function(){
+            if (vrcimg1.classList.contains('prodselect')) {
+                vrcimg3.classList.add('prodselect')
+                vrcimg1.classList.remove('prodselect')
+            }
+            if (vrcimg2.classList.contains('prodselect')) {
+                vrcimg3.classList.add('prodselect')
+                vrcimg2.classList.remove('prodselect')
+            }
+        
+        })
 
         menutoggle.onclick = function(){
             menutoggle.classList.toggle('active')
@@ -85,7 +149,6 @@
 
         c1.onclick = function(){
             c1.classList.toggle('favorite')
-            prod1.classList.toggle('favorite')
         }
 
         c2.onclick = function(){
@@ -109,6 +172,21 @@
         }
         c7.onclick = function(){
             c7.classList.toggle('favorite')
+        }
+        c8.onclick = function(){
+            c8.classList.toggle('favorite')
+        }
+        c9.onclick = function(){
+            c9.classList.toggle('favorite')
+        }
+        c10.onclick = function(){
+            c10.classList.toggle('favorite')
+        }
+        c11.onclick = function(){
+            c11.classList.toggle('favorite')
+        }
+        c12.onclick = function(){
+            c12.classList.toggle('favorite')
         }
 
     </script>
