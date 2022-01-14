@@ -55,15 +55,22 @@
                 </div>
             </div>
             <a href="https://api.whatsapp.com/send?phone=5571988869309&text=ola" class="comprar"><ion-icon class="zap" name="logo-whatsapp"></ion-icon><p class="pcompr">Comprar agora</p></a>
-            <div class="rightsidepg">
-                <ion-icon cartprodpg name="cart-outline"></ion-icon>
-                <div class="addremovecart">
-                    <ion-icon class="removecart" name="remove-outline"></ion-icon>
-                    <input class="quantidade" type="number" max="10" min="0" name="quantidade" id="quantidadecart">
-                    <ion-icon class="addcart" name="add-outline"></ion-icon>
-
-                </div>
-            </div>
+            <form>
+                <label for="quantia">Quantidade</label>
+                <select name="quantia" id="quantia">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </form>
     </section>
     <script>
         let menutoggle = document.querySelector('.toggle');
@@ -91,7 +98,16 @@
         let c12 = document.querySelector('.c12')
         let vrcimg1 = document.getElementById("vrcimg1");
         let vrcimg2 = document.getElementById("vrcimg2");
-        let vrcimg3 = document.getElementById("vrcimg3")
+        let vrcimg3 = document.getElementById("vrcimg3");
+
+        if (localStorage.quantia) {
+            document.getElementById('quantia').value = localStorage.quantia;
+        }
+        
+        var save = function() {
+            var quantia = document.getElementById('quantia').value;
+            localStorage.setItem('quantia', quantia);
+        }
 
         vrcimg1.addEventListener('click',function(){
                 if (vrcimg2.classList.contains('prodselect')) {
@@ -116,6 +132,7 @@
             }
         
         })
+
         vrcimg3.addEventListener('click',function(){
             if (vrcimg1.classList.contains('prodselect')) {
                 vrcimg3.classList.add('prodselect')
@@ -143,51 +160,7 @@
             sun.classList.toggle('no')
         }
 
-        prod5.onclick = function(){
-            prod5.classList.toggle('active')
-        }
-
-        c1.onclick = function(){
-            c1.classList.toggle('favorite')
-        }
-
-        c2.onclick = function(){
-            c2.classList.toggle('favorite')
-        }
-
-        c3.onclick = function(){
-            c3.classList.toggle('favorite')
-        }
-
-        c4.onclick = function(){
-            c4.classList.toggle('favorite')
-        }
-
-        c5.onclick = function(){
-            c5.classList.toggle('favorite')
-        }
-
-        c6.onclick = function(){
-            c6.classList.toggle('favorite')
-        }
-        c7.onclick = function(){
-            c7.classList.toggle('favorite')
-        }
-        c8.onclick = function(){
-            c8.classList.toggle('favorite')
-        }
-        c9.onclick = function(){
-            c9.classList.toggle('favorite')
-        }
-        c10.onclick = function(){
-            c10.classList.toggle('favorite')
-        }
-        c11.onclick = function(){
-            c11.classList.toggle('favorite')
-        }
-        c12.onclick = function(){
-            c12.classList.toggle('favorite')
-        }
+        document.onchange = save;
 
     </script>
 </body>
