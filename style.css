@@ -2,7 +2,6 @@ body
 {
     margin: 0px;
     background-color: var(--white);
-    transition: 0.2s;
 }
 :root
 {
@@ -324,8 +323,8 @@ body
     opacity: 0;
 
     position: absolute;
-    border: solid 4px;
-    border-color: var(--black);
+    border: solid 2px;
+    border-color: grey;
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -386,7 +385,7 @@ body
     text-decoration: none;
     width: 200px;
     height: 370px;
-    box-shadow: silver 0px 0px 8px;
+    box-shadow: black 2px 2px 10px;
     border-radius: 20px;
     padding: 15px;
     margin: 40px;
@@ -500,6 +499,10 @@ body
     width: 100%;
     margin-top: 600px;
 }
+.dfavoritos
+{
+    margin-top: 90px;
+}
 .elips
 {
     position: absolute;
@@ -529,10 +532,19 @@ body
 }
 .aviso2
 {
+    display: none;
     color: lightslategray;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
-    margin-top: -400px;
+    margin-top: 100px;
+}
+.dpflex
+{
+    display: flex;
+}
+.dpnone
+{
+    display: none;
 }
 .imgprodpg
 {
