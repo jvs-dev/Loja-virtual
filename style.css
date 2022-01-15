@@ -79,7 +79,7 @@ body
 }
 .you
 {
-    color: var(--royalblue);
+    color: var(--turquoise);
 }
 .toggle
 {
@@ -310,7 +310,7 @@ body
 }
 .slider
 {
-    margin-top: 150px;
+    margin-top: 120px;
     width: 90%;
     max-width: 1150px;
     height: 300px;
@@ -501,7 +501,7 @@ body
 }
 .dfavoritos
 {
-    margin-top: 90px;
+    margin-top: 20px;
 }
 .elips
 {
@@ -520,7 +520,7 @@ body
     cursor: pointer;
     margin-left: 0px;
     margin-top: 0px;
-    color: black;
+    color: darkblue;
 }
 
 .aviso1
@@ -536,7 +536,24 @@ body
     color: lightslategray;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+.propaganda0
+{
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.propaganda1
+{
+    background-image: url(propaganda.png);
+    background-size: 100% 100%;
+    width: 60%;
+    height: 160px;
+    border: solid 1px var(--black);
+    box-shadow: 0px 0px 15px var(--black);
 }
 .dpflex
 {
@@ -546,81 +563,13 @@ body
 {
     display: none;
 }
-.imgprodpg
+.dpblock
 {
-    display: flex;
-    height: 250px;
-    width: 380px;
-    background-image: url(carro\ de\ madeira.jpg);
-    background-size: 100% 100%;
-    border-radius: 0px;
-    border: solid 2px var(--black);
-    justify-content: right;
-
+    display: block;
 }
-.pgprdt
+.dpinline
 {
-    display: flex;
-    margin-top: 100px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding-bottom: 50px;
-}
-.pprodpg
-{
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-.pprodpg::after
-{
-    content: 'Produto de qualidade';
-    background-color: cyan;
-    padding: 0px 10px 1px 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    color: black;
-    font-weight: 400;
-}
-.nomeprodpg
-{
-    margin-bottom: 0px;
-}
-.nomeprodpg::after
-{
-    content: 'Suporte para plantas';
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--black);
-
-}
-.valorprodpg::after
-{
-    content: 'R$39,99';
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font-weight: 500;
-    color: deepskyblue;
-}
-.moedaprodpg::after
-{
-    content: '';
-    font-family: 'Poppins', sans-serif;
-    color: royalblue;
-    font-size: 20px;
-}
-.descriçãoprodpg
-{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.descriçãoprodpg::after
-{
-    content: 'Suporte para plantas de madeira para enfeitar...';
-    font-family: 'Poppins', sans-serif;
-    color: var(--black);
-    font-size: 15px;
+    display: inline;
 }
 .zap
 {
@@ -658,95 +607,4 @@ body
 .comprar:hover
 {
     box-shadow: 0px 0px 20px #25d366;
-}
-.variacoes
-{
-    display: flex;
-    height: 350px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-}
-.variação
-{
-    color: var(--black);
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-}
-.variaçãoimg
-{
-    background-image: url(carro\ de\ madeira.jpg);
-    background-size: 100% 100%;
-    height: 100px;
-    width: 100px;
-    cursor: pointer;
-    border: solid 2px var(--black);
-}
-.leftsidepg
-{
-    display: flex;
-    position: absolute;
-    margin-top: -18px;
-    margin-right: 550px;
-    flex-direction: column;
-    align-items: center;
-}
-.prodselect
-{
-    border: solid 3px deepskyblue;
-    border-radius: 20px;
-    transition: 0.1s;
-}
-.cora2
-{
-    color: var(--red);
-    margin: 5px;
-    font-size: 30px;
-    cursor: pointer;
-}
-.qtd
-{
-    width: 30px;
-    border: solid 1px var(--black);
-}
-.qtd:focus
-{
-    outline-width: 0;
-    border: solid 1px var(--black);
-}
-.rightsidepg
-{
-    position: absolute;
-    margin-top: 478px;
-    margin-left: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.addremovecart
-{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-.cartprodpg
-{
-    color: var(--black);
-    font-size: 35px;
-    cursor: pointer;
-}
-.removecart
-{
-    margin-right: 5px;
-    color: var(--black);
-    font-size: 25px;
-    cursor: pointer;
-}
-.addcart
-{
-    margin-left: 5px;
-    color: var(--black);
-    font-size: 25px;
-    cursor: pointer;
 }
