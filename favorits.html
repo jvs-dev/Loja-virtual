@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +46,7 @@
     <section class="loja dfavoritos">
         <div class="produtos">
             <p class="aviso2">Sua lista de desejos está vazia.</p>
-            <div class="produto prod1">
+            <div class="produto dpnone prod1">
                 <span></span>
                 <ion-icon name="heart" class="cora c1"></ion-icon>
                 <img class="imgproduto" src="suporte de plantas 3.jpg" alt="produto">
@@ -63,7 +63,7 @@
             </div>
             
             
-            <div class="produto prod2">
+            <div class="produto dpnone prod2">
                 <span></span>
                 <ion-icon name="heart" class="cora c2"></ion-icon>
                 <img class="imgproduto" src="suporte de plantas 10.jpg" alt="produto">
@@ -80,7 +80,7 @@
             </div>
             
             
-            <div class="produto prod3">
+            <div class="produto dpnone prod3">
                 <span></span>
                 <ion-icon name="heart" class="cora c3"></ion-icon>
                 <img class="imgproduto" src="bancos de madeira.jpg" alt="produto">
@@ -97,7 +97,7 @@
             </div>
             
             
-            <div class="produto bestvl prod4">
+            <div class="produto dpnone bestvl prod4">
                 <ion-icon name="heart" class="cora c4"></ion-icon>
                 <span></span>
                 <img class="imgproduto" src="mesa de centro jardim.jpg" alt="produto">
@@ -114,7 +114,7 @@
             </div>
             
             
-            <div class="produto prod5">
+            <div class="produto dpnone prod5">
                 <span></span>
                 <ion-icon name="heart" class="cora c5"></ion-icon>
                 <img class="imgproduto" src="porta livros de madeira (2).jpg" alt="produto">
@@ -131,7 +131,7 @@
             </div>
             
             
-            <div class="produto prod6">
+            <div class="produto dpnone prod6">
                 <span></span>
                 <ion-icon name="heart" class="cora c6"></ion-icon>
                 <img class="imgproduto" src="cesta de carne de madeira.jpg" alt="produto">
@@ -148,7 +148,7 @@
             </div>
             
             
-            <div class="produto prod7">
+            <div class="produto dpnone prod7">
                 <span></span>
                 <ion-icon name="heart" class="cora c7"></ion-icon>
                 <img class="imgproduto" src="porta livros de madeira.jpg" alt="produto">
@@ -165,7 +165,7 @@
             </div>
             
             
-            <div class="produto prod8">
+            <div class="produto dpnone prod8">
                 <span></span>
                 <ion-icon name="heart" class="cora c8"></ion-icon>
                 <img class="imgproduto" src="trem porta lapis.jpg" alt="produto">
@@ -182,7 +182,7 @@
             </div>
             
             
-            <div class="produto bestvl prod9">
+            <div class="produto dpnone bestvl prod9">
                 <span></span>
                 <ion-icon name="heart" class="cora c9"></ion-icon>
                 <img class="imgproduto" src="suporte de plantas 7.jpg" alt="produto">
@@ -199,7 +199,7 @@
             </div>
             
             
-            <div class="produto bestvl prod10">
+            <div class="produto dpnone bestvl prod10">
                 <span></span>
                 <ion-icon name="heart" class="cora c10"></ion-icon>
                 <img class="imgproduto" src="suporte de plantas 8.jpg" alt="produto">
@@ -216,7 +216,7 @@
             </div>
             
             
-            <div class="produto prod11">
+            <div class="produto dpnone prod11">
                 <span></span>
                 <ion-icon name="heart" class="cora c11"></ion-icon>
                 <img class="imgproduto" src="minimesa.jpg" alt="produto">
@@ -233,7 +233,7 @@
             </div>
             
             
-            <div class="produto prod12">
+            <div class="produto dpnone prod12">
                 <span></span>
                 <ion-icon name="heart" class="cora c12"></ion-icon>
                 <img class="imgproduto" src="port plnt.jpg" alt="produto">
@@ -330,98 +330,62 @@
 
         if (localStorage.c1 == 1) {
             c1.classList.add('favorite');
-        }
-
-        if (localStorage.c1 == 0) {
-            prod1.classList.add('dpnone');
+            prod1.classList.remove('dpnone')
         }
 
         if (localStorage.c2 == 1) {
             c2.classList.add('favorite');
-        }
-
-        if (localStorage.c2 == 0) {
-            prod2.classList.add('dpnone');
+            prod2.classList.remove('dpnone')
         }
 
         if (localStorage.c3 == 1) {
             c3.classList.add('favorite');
-        }
-
-        if (localStorage.c3 == 0) {
-            prod3.classList.add('dpnone');
+            prod3.classList.remove('dpnone')
         }
 
         if (localStorage.c4 == 1) {
             c4.classList.add('favorite');
-        }
-        
-        if (localStorage.c4 == 0) {
-            prod4.classList.add('dpnone');
+            prod4.classList.remove('dpnone')
         }
 
         if (localStorage.c5 == 1) {
             c5.classList.add('favorite');
-        }
-
-        if (localStorage.c5 == 0) {
-            prod5.classList.add('dpnone');
+            prod5.classList.remove('dpnone')
         }
 
         if (localStorage.c6 == 1) {
             c6.classList.add('favorite');
-        }
-
-        if (localStorage.c6 == 0) {
-            prod6.classList.add('dpnone');
+            prod6.classList.remove('dpnone')
         }
 
         if (localStorage.c7 == 1) {
             c7.classList.add('favorite');
-        }
-
-        if (localStorage.c7 == 0) {
-            prod7.classList.add('dpnone');
+            prod7.classList.remove('dpnone')
         }
 
         if (localStorage.c8 == 1) {
             c8.classList.add('favorite');
-        }
-
-        if (localStorage.c8 == 0) {
-            prod8.classList.add('dpnone');
+            prod8.classList.remove('dpnone')
         }
 
         if (localStorage.c9 == 1) {
             c9.classList.add('favorite');
-        }
-
-        if (localStorage.c9 == 0) {
-            prod9.classList.add('dpnone');
+            prod9.classList.remove('dpnone')
         }
 
         if (localStorage.c10 == 1) {
             c10.classList.add('favorite');
-        }
-
-        if (localStorage.c10 == 0) {
-            prod10.classList.add('dpnone');
+            prod10.classList.remove('dpnone')
         }
 
         if (localStorage.c11 == 1) {
             c11.classList.add('favorite');
-        }
-
-        if (localStorage.c11 == 0) {
-            prod11.classList.add('dpnone');
+            prod11.classList.remove('dpnone')
         }
 
         if (localStorage.c12 == 1) {
             c12.classList.add('favorite');
-        }
-
-        if (localStorage.c12 == 0) {
-            prod12.classList.add('dpnone');
+            prod12.classList.remove('dpnone')
         }
 
         if (localStorage.produto1qtdd == 0) {
