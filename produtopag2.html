@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,22 +88,22 @@
                 font-size: 20px;
                 color: var(--black);
             ">Fotos:</p>
-                <img class="variacao v1p1 selectv" src="suporte de plantas 3.jpg" alt="">
-                <img class="variacao v2p1" src="01c909ad-d05e-4cda-ba03-9c1f8772770d.jpg" alt="">
-                <img class="variacao v3p1" src="35f74eb5-5830-40a0-8989-febc15725be3.jpg" alt="">
+                <img class="variacao v1p1 selectv" src="suporte de plantas 10.jpg" alt="">
+                <img class="variacao v2p1" src="porta plantas de madeira.jpg" alt="">
+                <img class="variacao v3p1" src="a9f95ec5-075f-4011-8845-3e897571a433.jpg" alt="">
             </div>
             <div style="
             display: flex;
             flex-direction: column;
             align-items: center;
             ">
-                <div class="imgprod1pg bck1"><ion-icon name="heart" class="cora c1 prodpg"></ion-icon></div>
+                <div class="imgprod1pg bck4"><ion-icon name="heart" class="cora c2 prodpg"></ion-icon></div>
                 <p class="span">Produto de qualidade</p>
             </div>
         </div>
-        <p class="titlepgprod">Tronco/sup pequeno</p>
-        <p class="preçopgprod"><sub class="moeda">R$</sub>39,99</p>
-        <p class="descriçãopgprod">Tronco e suporte pequeno para plantas e objetos de madeira para decoração de jardim e casa.</p>
+        <p class="titlepgprod">Cesta para plantas</p>
+        <p class="preçopgprod"><sub class="moeda">R$</sub>19,99</p>
+        <p class="descriçãopgprod">Cesta para plantas de madeira para segurar, enfeitar e dar suporte a base da planta.</p>
             <a class="buynow" href="#">
                 <ion-icon class="zaplogo" name="logo-whatsapp"></ion-icon>
                 <p class="buy">Comprar agora</p>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <p class="nocartp">No carrinho:</p>
-            <input type="number" placeholder="0" max="10" min="0" name="quantiadocart1" id="quantiadocart1" disabled>
+            <input type="number" placeholder="0" max="10" min="0" name="quantiadocart2" id="quantiadocart2" disabled>
             <div class="posicionamento1 dpnone">
                 <div class="adicionaaocarrinhovrc">
                     <div style="
@@ -130,16 +130,14 @@
                         <ion-icon class="closecart" name="close"></ion-icon>
                     </div>
                     <div class="organizarimg2">
-                        <img class="imgvarqvcart variacão1p1 selecti" src="suporte de plantas 3.jpg" alt="">
-                        <img class="imgvarqvcart variacão2p1" src="01c909ad-d05e-4cda-ba03-9c1f8772770d.jpg" alt="">
-                        <img class="imgvarqvcart variacão3p1" src="35f74eb5-5830-40a0-8989-febc15725be3.jpg" alt="">
+                        <img class="imgvarqvcart variacão1p1 selecti" src="suporte de plantas 10.jpg" alt="">
+                        <img class="imgvarqvcart variacão2p1" src="porta plantas de madeira.jpg" alt="">
+                        <img class="imgvarqvcart variacão3p1" src="a9f95ec5-075f-4011-8845-3e897571a433.jpg" alt="">
                     </div>
-                    <p class="price1 pricevariacao1">R$39,99</p>
-                    <p class="price1 pricevariacao2 dpnone">R$44,99</p>
-                    <p class="price1 pricevariacao2 dpnone">R$49,99</p>
+                    <p class="price1 pricevariacao1">R$19,99</p>
                     <p class="quantidadetext">Quantidade<br>
                     máxima: 10</p>
-                    <input type="number" placeholder="0" value="0" max="10" min="0" name="quantiadocart1edit" id="quantiadocart1edit">
+                    <input type="number" placeholder="0" value="0" max="10" min="0" name="quantiadocart2edit" id="quantiadocart2edit">
                     <p class="adcbutton">Adicionar</p>
                 </div>
                 <ion-icon class="check dpnone" name="checkmark-circle"></ion-icon>
@@ -183,8 +181,8 @@
         let seguranca = document.querySelector('.seguranca')
         let idioma = document.querySelector('.idioma')
         let dados = document.querySelector('.dados')
-        var quantiadocart1 = document.getElementById('quantiadocart1');
-        let quantiadocart1edit = document.getElementById('quantiadocart1edit')
+        var quantiadocart2 = document.getElementById('quantiadocart2');
+        let quantiadocart2edit = document.getElementById('quantiadocart2edit')
         let adcbutton = document.querySelector('.adcbutton')
         let prenchcart1 = document.querySelector('.prenchcart1')
         let noprenchcart1 = document.querySelector('.noprenchcart1')
@@ -207,28 +205,28 @@
             carticon.classList.add('dpnone')
         }
 
-        if (localStorage.variação1p1) {
+        if (localStorage.variação1p2) {
         }
         else {
-            localStorage.variação1p1 = 0
+            localStorage.variação1p2 = 0
         }
 
-        if (localStorage.variação2p1) {
+        if (localStorage.variação2p2) {
         }
         else {
-            localStorage.variação2p1 = 0
+            localStorage.variação2p2 = 0
         }
 
-        if (localStorage.variação3p1) {
+        if (localStorage.variação3p2) {
         }
         else {
-            localStorage.variação3p1 = 0
+            localStorage.variação3p2 = 0
         }
 
-        if (localStorage.produto2qtdd) {
+        if (localStorage.produto1qtdd) {
         }
         else {
-            localStorage.produto2qtdd = 0
+            localStorage.produto1qtdd = 0
         }
 
         if (localStorage.produto3qtdd) {
@@ -237,9 +235,9 @@
             localStorage.produto3qtdd = 0
         }
 
-        quantiadocart1.value = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
-        localStorage.produto1qtdd = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
-        quantiadocart1edit.value = localStorage.variação1p1
+        quantiadocart2.value = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+        localStorage.produto2qtdd = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+        quantiadocart2edit.value = localStorage.variação1p2
 
         if (localStorage.dark == 1) {
             body.classList.add('dark');
@@ -247,20 +245,20 @@
             sun.classList.add('no')
         }
 
-        if (localStorage.c1 == 1) {
-            c1.classList.add('favorite');
+        if (localStorage.c2 == 1) {
+            c2.classList.add('favorite');
         }
 
-        if (localStorage.produto1qtdd >= 1) {
+        if (localStorage.produto2qtdd >= 1) {
             noprenchcart1.classList.add('dpnone')
             prenchcart1.classList.remove('dpnone')
         }
 
 
         v1p1.addEventListener('click',function(){
-            imgprod1pg.classList.add('bck1')
-            imgprod1pg.classList.remove('bck2')
-            imgprod1pg.classList.remove('bck3')
+            imgprod1pg.classList.add('bck4')
+            imgprod1pg.classList.remove('bck5')
+            imgprod1pg.classList.remove('bck6')
 
             if (v2p1.classList.contains('selectv')) {
                 v1p1.classList.add('selectv')
@@ -275,9 +273,9 @@
         })
 
         v2p1.addEventListener('click',function(){
-            imgprod1pg.classList.remove('bck1')
-            imgprod1pg.classList.add('bck2')
-            imgprod1pg.classList.remove('bck3')
+            imgprod1pg.classList.remove('bck4')
+            imgprod1pg.classList.add('bck5')
+            imgprod1pg.classList.remove('bck6')
 
             if (v1p1.classList.contains('selectv')) {
                 v2p1.classList.add('selectv')
@@ -291,9 +289,9 @@
         })
 
         v3p1.addEventListener('click',function(){
-            imgprod1pg.classList.remove('bck1')
-            imgprod1pg.classList.remove('bck2')
-            imgprod1pg.classList.add('bck3')
+            imgprod1pg.classList.remove('bck4')
+            imgprod1pg.classList.remove('bck5')
+            imgprod1pg.classList.add('bck6')
 
             if (v1p1.classList.contains('selectv')) {
                 v3p1.classList.add('selectv')
@@ -307,7 +305,7 @@
         })
 
         variacão1p1.addEventListener('click',function(){
-            quantiadocart1edit.value = localStorage.variação1p1
+            quantiadocart2edit.value = localStorage.variação1p2
             if (variacão2p1.classList.contains('selecti')) {
                 variacão1p1.classList.add('selecti')
                 variacão2p1.classList.remove('selecti')
@@ -321,7 +319,7 @@
         })
 
         variacão2p1.addEventListener('click',function(){
-            quantiadocart1edit.value = localStorage.variação2p1
+            quantiadocart2edit.value = localStorage.variação2p2
             if (variacão1p1.classList.contains('selecti')) {
                 variacão2p1.classList.add('selecti')
                 variacão1p1.classList.remove('selecti')
@@ -334,7 +332,7 @@
         })
 
         variacão3p1.addEventListener('click',function(){
-            quantiadocart1edit.value = localStorage.variação3p1
+            quantiadocart2edit.value = localStorage.variação3p2
             if (variacão1p1.classList.contains('selecti')) {
                 variacão3p1.classList.add('selecti')
                 variacão1p1.classList.remove('selecti')
@@ -419,16 +417,16 @@
             dados.classList.add('set')
         }
 
-        c1.onclick = function(){
-            c1.classList.toggle('favorite');
-            localStorage.setItem('c1', 0)
-            if (c1.classList.contains('favorite')) {
-                localStorage.setItem('c1', 1)
+        c2.onclick = function(){
+            c2.classList.toggle('favorite');
+            localStorage.setItem('c2', 0)
+            if (c2.classList.contains('favorite')) {
+                localStorage.setItem('c2', 1)
             }
         }
 
         adcbutton.onclick = function(){
-            if (quantiadocart1edit.value >= 0 && quantiadocart1edit.value < 11) {
+            if (quantiadocart2edit.value >= 0 && quantiadocart2edit.value < 11) {
                 check.classList.remove('dpnone')
                 setTimeout(() => {
                     check.classList.add('transition')
@@ -439,11 +437,11 @@
                 }, time);
                 setTimeout(() => {
                     if (variacão1p1.classList.contains('selecti')) {
-                        localStorage.setItem('variação1p1', quantiadocart1edit.value)
+                        localStorage.setItem('variação1p2', quantiadocart2edit.value)
                         posicionamento1.classList.remove('dpflex')
                         posicionamento1.classList.add('dpnone');
-                        quantiadocart1.value = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
-                        localStorage.produto1qtdd = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
+                        quantiadocart2.value = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+                        localStorage.produto2qtdd = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
                         carticon.value = Number(localStorage.produto1qtdd) + Number(localStorage.produto2qtdd)
                         if (carticon.value >= 1) {
                             carticon.classList.remove('dpnone')
@@ -453,11 +451,11 @@
                         }
                     }
                     if (variacão2p1.classList.contains('selecti')) {
-                        localStorage.setItem('variação2p1', quantiadocart1edit.value)
+                        localStorage.setItem('variação2p2', quantiadocart2edit.value)
                         posicionamento1.classList.remove('dpflex')
                         posicionamento1.classList.add('dpnone');
-                        quantiadocart1.value = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
-                        localStorage.produto1qtdd = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
+                        quantiadocart2.value = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+                        localStorage.produto2qtdd = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
                         carticon.value = Number(localStorage.produto1qtdd) + Number(localStorage.produto2qtdd)
                         if (carticon.value >= 1) {
                             carticon.classList.remove('dpnone')
@@ -467,11 +465,11 @@
                         }
                     }
                     if (variacão3p1.classList.contains('selecti')) {
-                        localStorage.setItem('variação3p1', quantiadocart1edit.value)
+                        localStorage.setItem('variação3p2', quantiadocart2edit.value)
                         posicionamento1.classList.remove('dpflex')
                         posicionamento1.classList.add('dpnone');
-                        quantiadocart1.value = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
-                        localStorage.produto1qtdd = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
+                        quantiadocart2.value = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+                        localStorage.produto2qtdd = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
                         carticon.value = Number(localStorage.produto1qtdd) + Number(localStorage.produto2qtdd)
                         if (carticon.value >= 1) {
                             carticon.classList.remove('dpnone')
@@ -480,11 +478,11 @@
                             carticon.classList.add('dpnone')
                         }
                     }
-                    if (localStorage.produto1qtdd >= 1) {
+                    if (localStorage.produto2qtdd >= 1) {
                         noprenchcart1.classList.add('dpnone')
                         prenchcart1.classList.remove('dpnone')
                     }
-                    if (localStorage.produto1qtdd == 0) {
+                    if (localStorage.produto2qtdd == 0) {
                         noprenchcart1.classList.remove('dpnone')
                         prenchcart1.classList.add('dpnone')
                     }
@@ -513,12 +511,12 @@
         }
 
         let savedata1 = function () {
-            quantiadocart1.value = localStorage.produto1qtdd
-            if (localStorage.produto1qtdd >= 1) {
+            quantiadocart2.value = localStorage.produto2qtdd
+            if (localStorage.produto2qtdd >= 1) {
                 noprenchcart1.classList.add('dpnone')
                 prenchcart1.classList.remove('dpnone')
             }
-            if (localStorage.produto1qtdd == 0) {
+            if (localStorage.produto2qtdd == 0) {
                 noprenchcart1.classList.remove('dpnone')
                 prenchcart1.classList.add('dpnone')
             }

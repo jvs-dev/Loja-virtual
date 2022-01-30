@@ -26,7 +26,7 @@
                 </div>
                 <div class="menuset">
                     <a href="index.html"><ion-icon name="storefront" class="icon"></ion-icon></a>
-                    <a href="cart.html"><ion-icon name="cart-outline" class="icon"></ion-icon></a>
+                    <a href="cart.html"><input type="number" name="carticon" id="carticon" disabled><ion-icon name="cart-outline" class="icon"></ion-icon></a>
                     <a href="favorits.html"><ion-icon name="heart" class="icon you"></ion-icon></a>
                     <ion-icon name="person-circle-outline" class="icon"></ion-icon>
                 </div>
@@ -39,6 +39,44 @@
                 <a href="https://www.google.com/maps/place/Periperi,+Salvador+-+BA/@-12.8685521,-38.4695075,20.25z/data=!4m5!3m4!1s0x71611f2756da837:0xab9badc182310d1b!8m2!3d-12.8668739!4d-38.477261" class="Local">SSA-BA</a>
             </div>
         </header>
+        <div class="allsettings">
+            <div class="topconfig">
+                <p class="titleconfig">Configurações</p>
+                <ion-icon class="closeconf" name="close"></ion-icon>
+            </div>
+            <div class="orgbot">
+                <div class="navconf">
+                    <p class="pconf ajuda set">Ajuda</p>
+                    <p class="pconf notificacoes">Notificações</p>
+                    <p class="pconf seguranca">Segurança</p>
+                    <p class="pconf idioma">Idioma</p>
+                    <p class="pconf dados">Dados</p>
+                    <a class="contactme" href="https://api.whatsapp.com/send?phone=5571988869309&text=Ol%C3%A1%20desenvolvedor%20do%20OkerlipoShop%20queria%20te%20falar...">Contact<br>Developer</a>
+                </div>
+                <div class="help">
+                    <h1>Ajuda</h1>
+                    <p class="texthelp"><h3>Por que os produtos que adicionei aos favoritos sumiram?</h3><br>
+                        <br>
+                        Talvez isso tenha acontecido porque a cache do celular ou do navegador foi limpa recentemente. Os dados dos produtos colocados no carrinho e da lista de produtos favoritos são armazenados na cache do navegador, isso não consome memoria do dispositivo mas ao limpar os dados do navegador você apagara os dados do site.<br>
+                        <br>
+                        <h3>Onde posso reportar bugs do site?</h3><br>
+                        <br>
+                        Acessando as configurações e clicando em "Contact Developer" você pode falar diretamente com o desenvolvedor do site pelo WhatsApp ou WhatsApp web para assim ele corrigir o bug o mais rápido possível. <br>
+                        <br>
+                        <h3>Por que o botão de comprar me leva para um contato do WhatsApp?</h3><br>
+                        <br>
+                        Ao clicar no botão de comprar você será redirecionado para o contato do vendedor dos produtos da OkerlipoShop para encomendar os produtos. Isso acontece porque a politica do GitHub não permite sistemas de compra online para sua segurança, então os produtos tem que ser negociados fora do site, ao entrar no WhatsApp você terá uma menssagem pré-definida com as especificações do produto para facilitar a compra. <br>
+                        <br>
+                        <h3>Onde fica a OkerlipoShop?</h3><br>
+                        <br>
+                        Atualmente está localizada em Salvador você pode ver mais detalhes de localização clicando em SSA-BA na pagina inicial ao lado do botão do menu. 
+                        <br>
+                        <br>
+                        Todos os Direitos Free on Github.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="propaganda0">
         <a class="propaganda1" href="index.html"></a>
@@ -67,10 +105,10 @@
                 <span></span>
                 <ion-icon name="heart" class="cora c2"></ion-icon>
                 <img class="imgproduto" src="suporte de plantas 10.jpg" alt="produto">
-                <a href="produtopag1.html" class="linkar">
-                    <p class="nome">Jarro para plantas</p>
+                <a href="produtopag2.html" class="linkar">
+                    <p class="nome">Cesta para plantas</p>
                     <p class="valor"><sub class="moeda">R$</sub>19,99</p>
-                    <p class="descrição">Jarro para plantas de madeira para enfeitar...</p>
+                    <p class="descrição">Cesta para plantas de madeira para enfeitar...</p>
                 </a>
                 <ion-icon class="elips" name="ellipsis-vertical"></ion-icon>
                 <div class="cartcrd cart2">
@@ -84,7 +122,7 @@
                 <span></span>
                 <ion-icon name="heart" class="cora c3"></ion-icon>
                 <img class="imgproduto" src="bancos de madeira.jpg" alt="produto">
-                <a href="produtopag1.html" class="linkar">
+                <a href="produtopag3.html" class="linkar">
                     <p class="nome">Bancos de madeira</p>
                     <p class="valor"><sub class="moeda">R$</sub>29,99</p>
                     <p class="descrição">Bancos de madeira para quintal, jardim e...</p>
@@ -321,6 +359,25 @@
         let noprenchcart11 = document.querySelector('.noprenchcart11')
         let prenchcart12 = document.querySelector('.prenchcart12')
         let noprenchcart12 = document.querySelector('.noprenchcart12')
+        let allsettings = document.querySelector('.allsettings')
+        let loja = document.querySelector('.loja')
+        let header1 = document.querySelector('.header1')
+        let closeconf = document.querySelector('.closeconf')
+        let ajuda = document.querySelector('.ajuda')
+        let notificacoes = document.querySelector('.notificacoes')
+        let seguranca = document.querySelector('.seguranca')
+        let idioma = document.querySelector('.idioma')
+        let dados = document.querySelector('.dados')
+        let carticon = document.getElementById('carticon')
+
+
+        localStorage.produto1qtdd = Number(localStorage.variação1p1) + Number(localStorage.variação2p1) + Number(localStorage.variação3p1);
+        localStorage.produto2qtdd = Number(localStorage.variação1p2) + Number(localStorage.variação2p2) + Number(localStorage.variação3p2);
+        carticon.value = Number(localStorage.produto1qtdd) + Number(localStorage.produto2qtdd)
+
+        if (carticon.value == 0) {
+            carticon.classList.add('dpnone')
+        }
 
         if (localStorage.dark == 1) {
             body.classList.add('dark');
@@ -393,7 +450,7 @@
             prenchcart1.classList.add('dpnone')
         }
 
-        if (localStorage.produto1qtdd == 1) {
+        if (localStorage.produto1qtdd >= 1) {
             noprenchcart1.classList.add('dpnone')
             prenchcart1.classList.remove('dpnone')
         }
@@ -403,7 +460,7 @@
             prenchcart2.classList.add('dpnone')
         }
 
-        if (localStorage.produto2qtdd == 1) {
+        if (localStorage.produto2qtdd >= 1) {
             noprenchcart2.classList.add('dpnone')
             prenchcart2.classList.remove('dpnone')
         }
@@ -413,7 +470,7 @@
             prenchcart3.classList.add('dpnone')
         }
 
-        if (localStorage.produto3qtdd == 1) {
+        if (localStorage.produto3qtdd >= 1) {
             noprenchcart3.classList.add('dpnone')
             prenchcart3.classList.remove('dpnone')
         }
@@ -423,7 +480,7 @@
             prenchcart4.classList.add('dpnone')
         }
 
-        if (localStorage.produto4qtdd == 1) {
+        if (localStorage.produto4qtdd >= 1) {
             noprenchcart4.classList.add('dpnone')
             prenchcart4.classList.remove('dpnone')
         }
@@ -433,7 +490,7 @@
             prenchcart5.classList.add('dpnone')
         }
 
-        if (localStorage.produto5qtdd == 1) {
+        if (localStorage.produto5qtdd >= 1) {
             noprenchcart5.classList.add('dpnone')
             prenchcart5.classList.remove('dpnone')
         }
@@ -443,7 +500,7 @@
             prenchcart6.classList.add('dpnone')
         }
 
-        if (localStorage.produto6qtdd == 1) {
+        if (localStorage.produto6qtdd >= 1) {
             noprenchcart6.classList.add('dpnone')
             prenchcart6.classList.remove('dpnone')
         }
@@ -453,7 +510,7 @@
             prenchcart7.classList.add('dpnone')
         }
 
-        if (localStorage.produto7qtdd == 1) {
+        if (localStorage.produto7qtdd >= 1) {
             noprenchcart7.classList.add('dpnone')
             prenchcart7.classList.remove('dpnone')
         }
@@ -463,7 +520,7 @@
             prenchcart8.classList.add('dpnone')
         }
 
-        if (localStorage.produto8qtdd == 1) {
+        if (localStorage.produto8qtdd >= 1) {
             noprenchcart8.classList.add('dpnone')
             prenchcart8.classList.remove('dpnone')
         }
@@ -473,7 +530,7 @@
             prenchcart9.classList.add('dpnone')
         }
 
-        if (localStorage.produto9qtdd == 1) {
+        if (localStorage.produto9qtdd >= 1) {
             noprenchcart9.classList.add('dpnone')
             prenchcart9.classList.remove('dpnone')
         }
@@ -483,7 +540,7 @@
             prenchcart10.classList.add('dpnone')
         }
 
-        if (localStorage.produto10qtdd == 1) {
+        if (localStorage.produto10qtdd >= 1) {
             noprenchcart10.classList.add('dpnone')
             prenchcart10.classList.remove('dpnone')
         }
@@ -493,7 +550,7 @@
             prenchcart11.classList.add('dpnone')
         }
 
-        if (localStorage.produto11qtdd == 1) {
+        if (localStorage.produto11qtdd >= 1) {
             noprenchcart11.classList.add('dpnone')
             prenchcart11.classList.remove('dpnone')
         }
@@ -503,7 +560,7 @@
             prenchcart12.classList.add('dpnone')
         }
 
-        if (localStorage.produto12qtdd == 1) {
+        if (localStorage.produto12qtdd >= 1) {
             noprenchcart12.classList.add('dpnone')
             prenchcart12.classList.remove('dpnone')
         }
@@ -519,6 +576,60 @@
             copyrightText.classList.toggle('active')
             config.classList.toggle('active')
             Local.classList.toggle('active')
+        }
+
+        config.onclick = function(){
+            allsettings.classList.add('dpflex')
+            loja.classList.add('dpnone')
+            header1.classList.add('dpnone')
+            images.classList.add('dpnone')
+        }
+        
+        closeconf.onclick = function(){
+            allsettings.classList.remove('dpflex')
+            loja.classList.remove('dpnone')
+            header1.classList.remove('dpnone')
+            images.classList.remove('dpnone')
+        }
+
+        ajuda.onclick = function(){
+            ajuda.classList.add('set')
+            notificacoes.classList.remove('set')
+            seguranca.classList.remove('set')
+            idioma.classList.remove('set')
+            dados.classList.remove('set')
+        }
+
+        notificacoes.onclick = function(){
+            ajuda.classList.remove('set')
+            notificacoes.classList.add('set')
+            seguranca.classList.remove('set')
+            idioma.classList.remove('set')
+            dados.classList.remove('set')
+        }
+
+        seguranca.onclick = function(){
+            ajuda.classList.remove('set')
+            notificacoes.classList.remove('set')
+            seguranca.classList.add('set')
+            idioma.classList.remove('set')
+            dados.classList.remove('set')
+        }
+
+        idioma.onclick = function(){
+            ajuda.classList.remove('set')
+            notificacoes.classList.remove('set')
+            seguranca.classList.remove('set')
+            idioma.classList.add('set')
+            dados.classList.remove('set')
+        }
+
+        dados.onclick = function(){
+            ajuda.classList.remove('set')
+            notificacoes.classList.remove('set')
+            seguranca.classList.remove('set')
+            idioma.classList.remove('set')
+            dados.classList.add('set')
         }
         
         daynight.onclick = function(){
@@ -672,246 +783,6 @@
             }
             if (prod1.classList.contains('dpnone') && prod2.classList.contains('dpnone') && prod3.classList.contains('dpnone') && prod4.classList.contains('dpnone') && prod5.classList.contains('dpnone') && prod6.classList.contains('dpnone') && prod7.classList.contains('dpnone') && prod8.classList.contains('dpnone') && prod9.classList.contains('dpnone') && prod10.classList.contains('dpnone') && prod11.classList.contains('dpnone') && prod12.classList.contains('dpnone')) {
             aviso2.classList.add('dpflex')
-            }
-        }
-
-        cart1.onclick = function () {
-            if (localStorage.produto1qtdd == true) {
-                if (localStorage.produto1qtdd == 0) {
-                    localStorage.setItem('produto1qtdd', 1)
-                    noprenchcart1.classList.add('dpnone')
-                    prenchcart1.classList.remove('dpnone')
-                }
-                if (localStorage.produto1qtdd == 1) {
-                    localStorage.setItem('produto1qtdd', 0)
-                    noprenchcart1.classList.remove('dpnone')
-                    prenchcart1.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto1qtdd', 1)
-                noprenchcart1.classList.add('dpnone')
-                prenchcart1.classList.remove('dpnone')
-            }
-        }
-
-        cart2.onclick = function () {
-            if (localStorage.produto2qtdd == true) {
-                if (localStorage.produto2qtdd == 0) {
-                    localStorage.setItem('produto2qtdd', 1)
-                    noprenchcart2.classList.add('dpnone')
-                    prenchcart2.classList.remove('dpnone')
-                }
-                if (localStorage.produto2qtdd == 1) {
-                    localStorage.setItem('produto2qtdd', 0)
-                    noprenchcart2.classList.remove('dpnone')
-                    prenchcart2.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto2qtdd', 1)
-                noprenchcart2.classList.add('dpnone')
-                prenchcart2.classList.remove('dpnone')
-            }
-        }
-
-        cart3.onclick = function () {
-            if (localStorage.produto3qtdd == true) {
-                if (localStorage.produto3qtdd == 0) {
-                    localStorage.setItem('produto3qtdd', 1)
-                    noprenchcart3.classList.add('dpnone')
-                    prenchcart3.classList.remove('dpnone')
-                }
-                if (localStorage.produto3qtdd == 1) {
-                    localStorage.setItem('produto3qtdd', 0)
-                    noprenchcart3.classList.remove('dpnone')
-                    prenchcart3.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto3qtdd', 1)
-                noprenchcart3.classList.add('dpnone')
-                prenchcart3.classList.remove('dpnone')
-            }
-        }
-
-        cart4.onclick = function () {
-            if (localStorage.produto4qtdd == true) {
-                if (localStorage.produto4qtdd == 0) {
-                    localStorage.setItem('produto4qtdd', 1)
-                    noprenchcart4.classList.add('dpnone')
-                    prenchcart4.classList.remove('dpnone')
-                }
-                if (localStorage.produto4qtdd == 1) {
-                    localStorage.setItem('produto4qtdd', 0)
-                    noprenchcart4.classList.remove('dpnone')
-                    prenchcart4.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto4qtdd', 1)
-                noprenchcart4.classList.add('dpnone')
-                prenchcart4.classList.remove('dpnone')
-            }
-        }
-
-        cart5.onclick = function () {
-            if (localStorage.produto5qtdd == true) {
-                if (localStorage.produto5qtdd == 0) {
-                    localStorage.setItem('produto5qtdd', 1)
-                    noprenchcart5.classList.add('dpnone')
-                    prenchcart5.classList.remove('dpnone')
-                }
-                if (localStorage.produto5qtdd == 1) {
-                    localStorage.setItem('produto5qtdd', 0)
-                    noprenchcart5.classList.remove('dpnone')
-                    prenchcart5.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto5qtdd', 1)
-                noprenchcart5.classList.add('dpnone')
-                prenchcart5.classList.remove('dpnone')
-            }
-        }
-
-        cart6.onclick = function () {
-            if (localStorage.produto6qtdd == true) {
-                if (localStorage.produto6qtdd == 0) {
-                    localStorage.setItem('produto6qtdd', 1)
-                    noprenchcart6.classList.add('dpnone')
-                    prenchcart6.classList.remove('dpnone')
-                }
-                if (localStorage.produto6qtdd == 1) {
-                    localStorage.setItem('produto6qtdd', 0)
-                    noprenchcart6.classList.remove('dpnone')
-                    prenchcart6.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto6qtdd', 1)
-                noprenchcart6.classList.add('dpnone')
-                prenchcart6.classList.remove('dpnone')
-            }
-        }
-
-        cart7.onclick = function () {
-            if (localStorage.produto7qtdd == true) {
-                if (localStorage.produto7qtdd == 0) {
-                    localStorage.setItem('produto7qtdd', 1)
-                    noprenchcart7.classList.add('dpnone')
-                    prenchcart7.classList.remove('dpnone')
-                }
-                if (localStorage.produto7qtdd == 1) {
-                    localStorage.setItem('produto7qtdd', 0)
-                    noprenchcart7.classList.remove('dpnone')
-                    prenchcart7.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto7qtdd', 1)
-                noprenchcart7.classList.add('dpnone')
-                prenchcart7.classList.remove('dpnone')
-            }
-        }
-
-        cart8.onclick = function () {
-            if (localStorage.produto8qtdd == true) {
-                if (localStorage.produto8qtdd == 0) {
-                    localStorage.setItem('produto8qtdd', 1)
-                    noprenchcart8.classList.add('dpnone')
-                    prenchcart8.classList.remove('dpnone')
-                }
-                if (localStorage.produto8qtdd == 1) {
-                    localStorage.setItem('produto8qtdd', 0)
-                    noprenchcart8.classList.remove('dpnone')
-                    prenchcart8.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto8qtdd', 1)
-                noprenchcart8.classList.add('dpnone')
-                prenchcart8.classList.remove('dpnone')
-            }
-        }
-
-        cart9.onclick = function () {
-            if (localStorage.produto9qtdd == true) {
-                if (localStorage.produto9qtdd == 0) {
-                    localStorage.setItem('produto9qtdd', 1)
-                    noprenchcart9.classList.add('dpnone')
-                    prenchcart9.classList.remove('dpnone')
-                }
-                if (localStorage.produto9qtdd == 1) {
-                    localStorage.setItem('produto9qtdd', 0)
-                    noprenchcart9.classList.remove('dpnone')
-                    prenchcart9.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto9qtdd', 1)
-                noprenchcart9.classList.add('dpnone')
-                prenchcart9.classList.remove('dpnone')
-            }
-        }
-
-        cart10.onclick = function () {
-            if (localStorage.produto10qtdd == true) {
-                if (localStorage.produto10qtdd == 0) {
-                    localStorage.setItem('produto10qtdd', 1)
-                    noprenchcart10.classList.add('dpnone')
-                    prenchcart10.classList.remove('dpnone')
-                }
-                if (localStorage.produto10qtdd == 1) {
-                    localStorage.setItem('produto10qtdd', 0)
-                    noprenchcart10.classList.remove('dpnone')
-                    prenchcart10.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto10qtdd', 1)
-                noprenchcart10.classList.add('dpnone')
-                prenchcart10.classList.remove('dpnone')
-            }
-        }
-
-        cart11.onclick = function () {
-            if (localStorage.produto11qtdd == true) {
-                if (localStorage.produto11qtdd == 0) {
-                    localStorage.setItem('produto11qtdd', 1)
-                    noprenchcart11.classList.add('dpnone')
-                    prenchcart11.classList.remove('dpnone')
-                }
-                if (localStorage.produto11qtdd == 1) {
-                    localStorage.setItem('produto11qtdd', 0)
-                    noprenchcart11.classList.remove('dpnone')
-                    prenchcart11.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto11qtdd', 1)
-                noprenchcart11.classList.add('dpnone')
-                prenchcart11.classList.remove('dpnone')
-            }
-        }
-
-        cart12.onclick = function () {
-            if (localStorage.produto12qtdd == true) {
-                if (localStorage.produto12qtdd == 0) {
-                    localStorage.setItem('produto12qtdd', 1)
-                    noprenchcart12.classList.add('dpnone')
-                    prenchcart12.classList.remove('dpnone')
-                }
-                if (localStorage.produto12qtdd == 1) {
-                    localStorage.setItem('produto12qtdd', 0)
-                    noprenchcart12.classList.remove('dpnone')
-                    prenchcart12.classList.add('dpnone')
-                }
-            }
-            else {
-                localStorage.setItem('produto12qtdd', 1)
-                noprenchcart12.classList.add('dpnone')
-                prenchcart12.classList.remove('dpnone')
             }
         }
 
